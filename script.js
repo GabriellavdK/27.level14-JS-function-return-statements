@@ -7,14 +7,19 @@ const checkBiggerThan100 = function(number) {
     }
 }
 
+// De korte oplossing, omdat return al automatisch true of false geeft is deze code ook juist. 
+const checkBiggerThan100 = function(number) {
+    return number > 100;
+};
+
 console.log(checkBiggerThan100(101));
 
 
 // Dit is een functie die iets produceert of berekend.
-const bouncer = function(maxNumber, actualNumber, age) {
-    if (age < 18) {
+const bouncer = function(maxVisitors, actualVisitors, ageVisitor) {
+    if (ageVisitor < 18) {
         return "This is a club for adults.";
-    } else if (actualNumber <= maxNumber) {
+    } else if (actualVisitors <= maxVisitors) {
         return "Come in!"
     } else {
         return "It's too busy now, come back later."
